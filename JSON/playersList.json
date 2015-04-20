@@ -1,0 +1,121 @@
+[
+	{
+		"name": "Kompany",
+		"firstName": "Vincent",
+		"img" : "img/joueurs/01.png",
+		"miniature": "img/joueurs/01_square.png"
+	},
+	{
+		"name": "Mignolet",
+		"firstName": "Simon",
+		"img" : "img/joueurs/04.png",
+		"miniature": "img/joueurs/04_square.png"
+	},
+	{
+		"name": "Gillet",
+		"firstName": "Jean-François",
+		"img" : "img/joueurs/05.png",
+		"miniature": "img/joueurs/05_square.png"
+	},
+	{
+		"name": "Ciman",
+		"firstName": "Laurent",
+		"img" : "img/joueurs/06.png",
+		"miniature": "img/joueurs/06_square.png"
+	},
+	{
+		"name": "Witsel",
+		"firstName": "Axel",
+		"img" : "img/joueurs/08.png",
+		"miniature": "img/joueurs/08_square.png"
+	},
+	{
+		"name": "Alderweireld",
+		"firstName": "Toby",
+		"img" : "img/joueurs/09.png",
+		"miniature": "img/joueurs/09_square.png"
+	},
+	{
+		"name": "Courtois",
+		"firstName": "Thibaut",
+		"img" : "img/joueurs/10.png",
+		"miniature": "img/joueurs/10_square.png"
+	},
+	{
+		"name": "Chadli",
+		"firstName": "Nacer",
+		"img" : "img/joueurs/11.png",
+		"miniature": "img/joueurs/11_square.png"
+	},{
+		"name": "Vertonghen",
+		"firstName": "Jan",
+		"img" : "img/joueurs/12.png",
+		"miniature": "img/joueurs/12_square.png"
+	},
+	{
+		"name": "Lombaerts",
+		"firstName": "Nicolas",
+		"img" : "img/joueurs/13.png",
+		"miniature": "img/joueurs/13_square.png"
+	},
+	{
+		"name": "Mertens",
+		"firstName": "Dries",
+		"img" : "img/joueurs/14.png",
+		"miniature": "img/joueurs/14_square.png"
+	},
+	{
+		"name": "Hazard",
+		"firstName": "Eden",
+		"img" : "img/joueurs/15.png",
+		"miniature": "img/joueurs/15_square.png"
+	},
+	{
+		"name": "De Bruyne",
+		"firstName": "Kevin",
+		"img" : "img/joueurs/16.png",
+		"miniature": "img/joueurs/16_square.png"
+	},
+	{
+		"name": "Origi",
+		"firstName": "Divock",
+		"img" : "img/joueurs/18.png",
+		"miniature": "img/joueurs/18_square.png"
+	},
+	{
+		"name": "Nainggolan",
+		"firstName": "Radja",
+		"img" : "img/joueurs/21.png",
+		"miniature": "img/joueurs/21_square.png"
+	},
+	{
+		"name": "Ferreira-Carrasco",
+		"firstName": "Yannick",
+		"img" : "img/joueurs/24.png",
+		"miniature": "img/joueurs/24_square.png"
+	},
+	{
+		"name": "Vanden Borre",
+		"firstName": "Anthony",
+		"img" : "img/joueurs/25.png",
+		"miniature": "img/joueurs/25_square.png"
+	},
+	{
+		"name": "Fellaini",
+		"firstName": "Marouane",
+		"img" : "img/joueurs/26.png",
+		"miniature": "img/joueurs/26_square.png"
+	},
+	{
+		"name": "Denayer",
+		"firstName": "Jason",
+		"img" : "img/joueurs/27.png",
+		"miniature": "img/joueurs/27_square.png"
+	},
+	{
+		"name": "Benteke",
+		"firstName": "Christian ",
+		"img" : "img/joueurs/30.png",
+		"miniature": "img/joueurs/30_square.png"
+	}
+]

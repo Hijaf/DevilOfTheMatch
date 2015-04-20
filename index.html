@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="En" data-ng-app="DevilOfTheMatch">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Devil Of The Match</title>
+		<meta name="description" content="Choose your devil of the match">
+		<meta name="author" content="Kevin Guéders">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" href="/img/favicon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+<!--		<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+	</head>
+	<body data-ng-controller="mainCtrl" data-ng-keydown="arrowDown($event)">
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<header data-ng-controller="countryCtrl">
+			<h1>
+				<span class="outliner">
+					Devil of the match
+				</span>
+				<a href="index.html">
+					<img src="img/devil_match_logo.png" alt="Devil of the match - Energized by Luminus">
+				</a>
+			</h1>
+			<nav class="matchOfTheDay">
+				<h2>Match of the day</h2>
+				<a data-ng-href="{{belgium.url}}">
+					<img src="#" data-ng-src="{{belgium.srcImg}}" alt="{{belgium.altImg}}">
+					{{belgium.name}}
+				</a>
+				<a data-ng-href="{{country.url}}">
+					<img src="#" data-ng-src="{{country.srcImg}}" alt="{{country.altImg}}">
+					{{country.name}}
+				</a>
+			</nav>
+		</header>
+		<section data-ng-controller="playersCtrl" data-ng-class="{overflowHide: popup}">
+			<h2>
+				<img src="img/icon_diable.png" alt="">
+				<span>Choisis ton</span>
+				<span>Devil of the match</span>
+			</h2>
+			<img src="img/logo_urbfsa.png" alt="" class="urbfsa">
+			<div class="container" data-ng-swipe-right="previewPlayer(indexActifPlayer)" data-ng-swipe-left="nextPlayer(indexActifPlayer)">
+				<div class="player">
+					<h3 class="outliner">Joueur du match</h3>
+					<img class="playerImg" src="#" data-ng-src="{{playerSelected.img}}" alt="{{playerSelected.name}} - {{playerSelected.firstName}}">
+					<div class="text">
+						<span>{{playerSelected.firstName}}</span>
+						<span>{{playerSelected.name}}</span>
+						<button class="validate" data-ng-click="voteForPlayer(indexActifPlayer, playerSelected)" data-ng-disabled="popup" data-ng-class="{disabled: popup}">Valider <img src="img/arrows/arrow-validation.png" width="16" height="24" alt=""></button>
+					</div>
+				</div>
+				<button class="goLeft" data-ng-click="previewPlayer(indexActifPlayer)" data-ng-if="indexActifPlayer!=0">
+						<img src="#" data-ng-src="img/arrows/arrow-left-combi.png" alt="Left">
+				</button>
+				<button class="goRight" data-ng-click="nextPlayer(indexActifPlayer)" data-ng-if="indexActifPlayer!=(players.length-1)">
+						<img src="#" data-ng-src="img/arrows/arrow-right-combi.png" alt="Right">
+				</button>
+			</div>
+			<nav class="playerList">
+				<h3 class="outliner">Liste des joueurs</h3>
+				<ul data-playerslist>
+					<li data-ng-repeat="player in players track by $index" data-ng-class="{actif: $index==indexActifPlayer}">
+						<button data-ng-click="selectPlayer($index)">
+							<img src="#" data-ng-src="{{player.miniature}}" alt="{{player.name}} - {{player.firstName}}">
+						</button>
+					</li>
+				</ul>
+			</nav>
+			<div data-ng-if="popup" class="popup">
+				<h2>
+					Vous avez voté <span>{{vote.firstName}} {{vote.name}}</span>
+				</h2>
+			</div>
+		</section>
+		<footer>
+			<div class="sponsors">
+				<a href="http://www.rtbf.be" title="Site de la RTBF">
+					<img src="img/sponsors/rtbf_logo.png" alt="Logo RTBF">
+				</a>
+				<a href="http://www.luminus.be/" title="Site de Luminus">
+					<img src="img/sponsors/luminus_logo.png" alt="Logo Luminus">
+				</a>
+				<a href="http://www.sporza.be/" title="Site de Sporza">
+					<img src="img/sponsors/sporza_logo.png" alt="Logo Sporza">
+				</a>
+			</div>
+			<a href="http://tapptic.be">
+				<img class="powered" src="img/sponsors/poweredby.png" alt="">
+			</a>
+		</footer>
+		<script>
+			var appName = "DevilOfTheMatch"
+		</script>
+		<script src="js/vendor/angular.min.js"></script>
+		<script src="js/vendor/angular-route.min.js"></script>
+		<script src="js/vendor/angular-touch.min.js"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+
+header {
+	background: url(../img/bg_header_mobile.jpg);
+	background-size: cover;
+	display: block;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+h1, h2 {
+	margin: 0;
+	span{
+		display: block;
+	}
+	span+span{
+		color: @yellowLight;
+	}
+}
+
+h1 img {
+	display: block;
+	margin: 10px auto;
+	width: 125px;
+}
+
+header .matchOfTheDay {
+	display: block;
+	overflow: hidden;
+	margin: 0 auto 15px auto;
+}
+.matchOfTheDay img{
+	width: 100%;
+	height: 100%;
+}
+
+header h2 {
+	display: block;
+	text-align: center;
+	margin: 15px auto 10px;
+	color: @yellowLight;
+	font-size: 1em;
+}
+
+header a {
+	display: block;
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	color: @white;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+h1 a{
+	float: none;
+	width: 100%;
+}
+
+
+@media only screen and (min-width: 768px){
+	h1 img{
+		width: 310px;
+		margin: 25px auto 10px;
+	}
+	header .matchOfTheDay{
+		width: 400px;
+	}
+	.matchOfTheDay img{
+		width: 180px;
+		height: 180px;
+		display: block;
+		margin: auto;
+	}
+	header h2, header a {
+		font-size: 1.3em;
+	}
+	header a{
+		padding: 0 10px;
+	}
+}
+
+@media only screen and (min-width: 1280px){
+	header{
+		width: 472px;
+		height: 100%;
+		float: left;
+		background: url(../img/border-yellow.png) no-repeat right top;
+		background-size: contain;
+		background-color: @redTrans;
+		position: relative;
+	}
+	header .matchOfTheDay{
+		position: absolute;
+		top: 50%;
+	}
+	
+}

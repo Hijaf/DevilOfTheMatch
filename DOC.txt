@@ -1,0 +1,21 @@
+////////////////////////////////////////////////////
+
+			Maquette réalisée par Kevin Guéders.
+			kevin.gueders@gmail.com
+			0474/675110
+
+////////////////////////////////////////////////////
+
+Framework/librairies utilisées:
+
+	Boilerplate.
+	AngularJs
+	(Less)
+
+Taskmanager utilisé (compilation des fichiers .less, minification du css, compilation et minification des fichiers .js): 
+
+	gulp
+
+Run
+	npm install
+	gulp

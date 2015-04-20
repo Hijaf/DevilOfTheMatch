@@ -1,0 +1,45 @@
+footer {
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	img {
+		display: block;
+		margin: auto;
+	}
+}
+.sponsors {
+	overflow: hidden;
+	font-size: 0;
+	margin: 0 0 10px 0;
+	text-align: center;
+	img{
+		height: 52px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+}
+
+.powered {
+	height: 16px;
+	margin: 10px auto;
+}
+
+
+@media only screen and (min-width: 768px){
+	.sponsors{
+		float: left;
+		margin: 0 0 20px 0;
+	}
+	.powered{
+		float: right;
+		margin: 22px 20px;
+	}
+}
+
+@media only screen and (min-width: 1280px){
+	.sponsors{
+		width: 472px;
+	}
+}

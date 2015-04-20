@@ -1,0 +1,344 @@
+section {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: url(../img/background-mobile.jpg);
+	background-size: cover;
+	padding: 0 0 89px 0;
+	h2{
+		position: relative;
+		margin: 20px 0 0 10px;
+		padding: 2px 0 0 0;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+			width: 39px;
+			height: 39px;
+		}
+		span{
+			margin: 0 0 0 45px;
+			font-size: 0.74em;
+			font-weight: 100;
+			line-height: 1em;
+		}
+		span+span{
+			font-size: 0.95em;
+			font-weight: 600;
+			line-height: 1em;
+		}
+	}
+	.urbfsa{
+		position: absolute;
+		top: 20px;
+		right: 10px;
+		margin: 0;
+		width: 10%;
+		max-width: 48px;
+	}
+	.popup{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.85);
+		text-align: center;
+		z-index: 20;
+		h2{
+			position: absolute;
+			display: block;
+			margin: 0;
+			width: 100%;
+			top: 35%;
+			font-size: 2.3em;
+			span{
+				color: @yellow;
+				font-size: 1em;
+				font-weight: 600;
+				margin: 0;
+			}
+		}
+	}
+}
+section.overflowHide{
+	overflow: hidden;
+}
+.container{
+	position: relative;
+	width: 100%;
+	.goLeft, .goRight{
+		position: absolute;
+		top: 0;
+		display: block;
+		height: 100%;
+		width: 37px;
+		background: none;
+		border: none;
+		color: @white;
+		img{
+			width: 100%;
+		}
+	}
+	.goLeft{
+		left: 0px;
+	}
+	.goRight{
+		right: 0px;
+	}
+}
+.player {
+	position: relative;
+	width: 100%;
+	background: url(../img/slider-background.png) no-repeat 80% 15px;
+	background-size: 60% 75%;
+	margin: 15px 0 0 0;
+	.playerImg{
+		width: 50%;
+		margin: 0 0 0 10px;
+	}
+	.text{
+		position: absolute;
+		left: 47%;
+		bottom: 18%;
+		width: 43%;
+	}
+	span{
+		display: block;
+		max-width: 100%;
+		line-height: 0.8em;
+		font-size: 1.2em;
+		font-weight: 600;
+		word-wrap: break-word;
+	}
+	span+span{
+		font-size: 1.6em;
+		color: @yellow;
+	}
+	.validate{
+		font-size: 1.25em;
+		font-weight: 600;
+		background-color: @yellowLight;
+		border: none;
+		border-radius: 3px;
+		padding: 4px 10px;
+		margin: 12px 0 0 0;
+		color: @grayDark;
+		img{
+			width: 10px;
+			height: 16px;
+			display: inline-block;
+			margin: -3px 0 0 4px;
+		}
+	}
+	.validate.disabled{
+		background-color: @gray;
+	}
+}
+
+.playerList {
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	overflow-x: auto;
+	display: block;
+	width: 100%;
+	margin: 0 0 25px 0;
+	ul{
+		padding: 0 10px;
+		margin: 0 auto 16px;
+		display: block;
+		list-style: none;
+		overflow: hidden;
+	}
+	li{
+		display: block;
+		width: 120px;
+		height: 120px;
+		box-sizing: border-box;
+		padding: 10px;
+		overflow: hidden;
+		float: left;
+	}
+	li.actif{
+		padding: 0px;
+		button{
+			border-color: @yellowLight;
+		}
+	}
+	button{
+		background: none;
+		border: none;
+		border-radius: 100px;
+		border: 4px solid @gray;
+		padding: 0;
+		margin: 0;
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	section {
+		h2{
+			padding: 4px 0 0 0;
+			img{
+				width: 55px;
+				height: 55px;
+			}
+			span{
+				margin: 0 0 0 61px;
+				font-size: 20px;
+			}
+			span+span{
+				font-size: 32px;
+			}
+		}
+	}
+	.container{
+		.goLeft, .goRight{
+			width: 52px;
+			box-sizing: content-box;
+			padding: 0 26px 0;
+			img{
+				width: 100%;
+			}
+		}
+		.goLeft{
+			left: 0px;
+		}
+		.goRight{
+			right: 0px;
+		}
+	}
+	.player {
+		background: url(../img/slider-background.png) no-repeat 80% 15px;
+		background-size: 500px 427px;
+		.playerImg{
+			width: 420px;
+			margin: 0 0 0 6%;
+		}
+		.text{
+			position: absolute;
+			left: 49%;
+			width: 41%;
+		}
+		span{
+			font-size: 2em;
+		}
+		span+span{
+			font-size: 4em;
+		}
+		.validate{
+			font-size: 2em;
+			padding: 12px 30px;
+			margin: 30px 0 0 0;
+			img{
+				width: 16px;
+				height: 24px;
+				margin: -6px 0 0 4px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.player {
+		width: 900px;
+		margin: 15px auto 0;
+		background: url(../img/slider-background.png) no-repeat 80% 15px;
+		background-size: 500px 427px;
+		.playerImg{
+			width: 420px;
+			margin: 0 0 0 8%;
+		}
+		.text{
+			width: 49%;
+		}
+		span{
+			font-size: 2.75em;
+		}
+		span+span{
+			font-size: 5em;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px){
+	section{
+		padding: 0;
+		height: 100%;
+		width: auto;
+		overflow: hidden;
+		overflow-y: auto;
+		background: none;
+		background-color: @grayDarkTrans;
+		h2{
+			margin: 45px 0 20px 55px;
+		}
+		.urbfsa{
+			top: 45px;
+			right: 55px;
+		}
+	}
+	.player {
+		.text{
+			  width: 33%;
+		}
+		span{
+			font-size: 1.7em;
+		}
+		span+span{
+			font-size: 3.4em;
+		}
+	}
+	.playerList {
+		ul{
+			width: 83%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1650px){
+	.player {
+		.playerImg{
+			margin: 0;
+		}
+		.text{
+			left: 42%;
+			width: 60%;
+		}
+		span{
+			font-size: 3em;
+		}
+		span+span{
+			font-size: 6em;
+		}
+	}
+	.container{
+		.goLeft, .goRight{
+			width: 52px;
+			box-sizing: content-box;
+			padding: 0 66px 0;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px){
+	.player {
+		.text{
+			width: 75%;
+		}
+	}
+}

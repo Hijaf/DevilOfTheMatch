@@ -1,0 +1,35 @@
+@import 'normalize.less';
+@import 'main.less';
+@import 'fontCassannet.less';
+@import 'variables.less';
+
+
+body{
+	color: @white;
+	font-size: 1em;
+	font-family: 'Cassannet',Helvetica, Arial, Verdana, sans-serif;
+	text-transform: uppercase;
+	position: relative;
+}
+.outliner{
+	display: none;
+}
+button{
+	outline: 0;
+	text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1280px){
+	html, body{
+		height: 100%;
+		overflow: hidden;
+	}
+	body{
+		background: url(../img/background.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+@import 'header.less';
+@import 'content.less';
+@import 'footer.less';
