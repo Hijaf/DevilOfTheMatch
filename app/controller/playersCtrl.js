@@ -2,7 +2,6 @@ angular.module(appName).controller('playersCtrl', ['$scope', '$rootScope', 'Play
 	$scope.popup = false;
 	$scope.getPlayersList = function(){
 		PlayersService.getPlayers().success(function(data,status){
-			console.log(data);
 			$scope.players = data;
 			$scope.playerSelected = data[0];
 			$scope.indexActifPlayer = 0;

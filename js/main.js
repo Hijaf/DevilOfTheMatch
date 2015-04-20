@@ -3,32 +3,6 @@ var DevilOfTheMatch = angular.module(appName, [
 	'ngTouch'
 ]);
 
-angular.module(appName).config(['$routeProvider',
-	function ($routeProvider) {
-		$routeProvider.
-			when('/lists',{
-				templateUrl: 'app/views/lists.html',
-				controller: 'listsCtrl'
-			}).
-			otherwise({
-				redirectTo: '/lists'
-			});
-	}]);
-angular.module(appName).directive('focus', ['$timeout', function($timeout){
-	return {
-		restrict: "A",
-		scope: {
-			focus: "="
-		},
-		link : function(scope, element, attrs){
-			scope.$watch('focus', function(value){
-				if(value){
-					element[0].focus();
-				}
-			})
-		}
-	};
-}]);
 angular.module(appName).directive('playerslist', ['$window',function($window){
 	return {
 		restrict: "A",
@@ -63,7 +37,6 @@ angular.module(appName).controller('playersCtrl', ['$scope', '$rootScope', 'Play
 	$scope.popup = false;
 	$scope.getPlayersList = function(){
 		PlayersService.getPlayers().success(function(data,status){
-			console.log(data);
 			$scope.players = data;
 			$scope.playerSelected = data[0];
 			$scope.indexActifPlayer = 0;
@@ -115,47 +88,6 @@ angular.module(appName).service('CountryService', ['$http', '$q', function ($htt
 	return{
 		getCountry: function(country){
 			return $http({method: 'GET', url: url[country]});
-		}
-	};
-}]);
-angular.module(appName).service('DirectoryService', ['$http', '$q', '$timeout', function ($http, $q, $timeout){
-		return{
-			saveDirectory: function (aDirectories){
-				var deferred= $q.defer();
-				$timeout(function(){
-					window.localStorage.setItem('karkeAppliDivxDir', JSON.stringify(aDirectories));
-					deferred.resolve();
-				}, 0);
-				return deferred.promise;
-			},
-			getDirectories: function(){
-				var deferred = $q.defer();
-				if(window.localStorage.getItem('karkeAppliDivxDir')){
-					deferred.resolve({data: JSON.parse(window.localStorage.getItem('karkeAppliDivxDir'))});
-				}
-				return deferred.promise;
-			}
-		};
-	}
-]);
-angular.module(appName).service('PathDirService',['$q', function($q){
-	return {
-		getPathDir: function(directory){
-			console.log(directory);
-//			fs.readdir(directory,
-//				function(err, files){
-//					var aFiles = [];
-//					if(err) throw err;
-////					for(var i=0;i<files.length;i++){
-////						console.log(files[i].indexOf('.wmv'));
-////						if(files[i].indexOf('.wmv')!=-1){
-////							aFiles.push(files[i]);
-////						}
-////					}
-//					console.log(files);
-//					console.log(aFiles);
-//				}
-//			);
 		}
 	};
 }]);

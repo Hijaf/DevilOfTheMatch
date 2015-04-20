@@ -12,6 +12,9 @@ Framework/librairies utilisées:
 	AngularJs
 	(Less)
 
+Si le site est visualisé dans le navigateur chrome, il faut le faire tourner dans un localhost.
+Chrome bloquant les requêtes AJAX pour le protocole "File://" pour des raisons de sécurité.
+
 Taskmanager utilisé (compilation des fichiers .less, minification du css, compilation et minification des fichiers .js): 
 
 	gulp
